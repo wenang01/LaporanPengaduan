@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="laporanpengaduan" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="e115bc59-fd0f-446b-a585-04725e27d7f0">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[cGVuZ2FkdWFuIEFTICwxMjUsMTI4LDExYWI3NzMwLTY0YjQtNDNhMy1iNTRkLWU3Mjg4ZDUwNmY1
+Yzs=]]>
+	</property>
+	<field name="idPengaduan" class="java.lang.Long">
+
+	</field>
+	<field name="nama" class="java.lang.String">
+
+	</field>
+	<field name="kejadian" class="java.lang.String">
+
+	</field>
+	<field name="alamat" class="java.lang.String">
+
+	</field>
+	<field name="keterangan" class="java.lang.String">
+
+	</field>
+	<field name="status" class="java.lang.String">
+
+	</field>
+	<background>
+		<band height="575" splitType="Stretch">
+			<image vAlign="Bottom">
+				<reportElement positionType="Float" x="-20" y="66" width="105" height="409" uuid="64ca4020-b604-4de9-9ed1-921b74cfd593"/>
+				<imageExpression><![CDATA["waves.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="475" width="105" height="100" backcolor="#666666" uuid="6eb7cb61-0dd7-47a8-8475-5fa6c3a348dc"/>
+				<textField>
+					<reportElement style="Column header" x="0" y="0" width="104" height="73" forecolor="#000000" uuid="db8457c8-99e9-434f-b439-2d400dff2bcd"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="58" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="0" y="77" width="104" height="20" forecolor="#000000" uuid="e20c8a65-aded-41dc-a107-108a9159af99"/>
+					<box leftPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Center">
+						<font size="16" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement mode="Transparent" x="42" y="73" width="20" height="1" backcolor="#FFFFFF" uuid="db6d7ead-4383-4f8c-81cf-1e3064eb6924"/>
+				</line>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="802" height="67" uuid="1dcadd54-7d50-4470-85ed-189e4d910b25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Laporan Pengaduan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="232" y="67" width="568" height="37" uuid="862cb50c-5a5e-4906-a495-226e25115fb6"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Laporan Pengaduan Tindak Kejahatan]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="97" y="5" width="705" height="20" backcolor="#666666" uuid="35d90a9b-bb7e-4ec4-bfa2-68be1967d6b2"/>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="117" height="15" uuid="59617b10-b519-4f00-9a4e-45505c4d50a7">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="39c2d019-3092-46ae-b9ea-fc2e95d40469"/>
+					</reportElement>
+					<text><![CDATA[ID Pengaduan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="117" y="0" width="117" height="15" uuid="a4a9d0f6-8b91-46cb-a75d-e5cdfe74af87">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f13d3e8b-38bd-4ecb-902f-69fa937cfcd6"/>
+					</reportElement>
+					<text><![CDATA[Nama Pelapor]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="234" y="0" width="117" height="15" uuid="4e7ae0d9-d03a-431c-883e-ffba8d6a44c2">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="30c4c8e9-cafa-4dd9-94d0-e9cf31b1e9bf"/>
+					</reportElement>
+					<text><![CDATA[Kejadian]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="351" y="0" width="117" height="15" uuid="04994744-e310-406e-ab2c-39fd9b99ad81">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4abbc1f9-16ea-4b41-9d91-18d5d31b21b3"/>
+					</reportElement>
+					<text><![CDATA[Alamat]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="468" y="0" width="117" height="15" uuid="c9937c5e-560b-4ab8-8c18-7603bca8a8ca">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="812f2546-5236-41e4-9fb8-0b12abf104f4"/>
+					</reportElement>
+					<text><![CDATA[Keterangan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="585" y="0" width="117" height="15" uuid="6382915b-3012-45a3-b051-e8e1fe74d40d">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="344f42c5-8708-4df5-a659-99aff6a9ccc9"/>
+					</reportElement>
+					<text><![CDATA[Status Laporan]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="97" y="1" width="705" height="15" uuid="89a3da05-fdde-4ffe-965f-cc476f72e3ab"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="117" height="15" uuid="259067e1-812b-44a0-86c8-f09074f3ed25">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="39c2d019-3092-46ae-b9ea-fc2e95d40469"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{idPengaduan}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="117" y="0" width="117" height="15" uuid="300de1b7-12d4-445b-ab7b-78c2acb45fdb">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f13d3e8b-38bd-4ecb-902f-69fa937cfcd6"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="234" y="0" width="117" height="15" uuid="e92ee76c-31ef-455c-8b22-4cb995a61164">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="30c4c8e9-cafa-4dd9-94d0-e9cf31b1e9bf"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{kejadian}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="351" y="0" width="117" height="15" uuid="28521c87-4b84-4112-8914-a6e1eae77d9c">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4abbc1f9-16ea-4b41-9d91-18d5d31b21b3"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="468" y="0" width="117" height="15" uuid="6b4f6241-f70b-42a0-8e37-39942ab4b301">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="812f2546-5236-41e4-9fb8-0b12abf104f4"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{keterangan}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="585" y="0" width="117" height="15" uuid="fe21ce22-5a3f-4494-a3cf-05c8cfac66a8">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="344f42c5-8708-4df5-a659-99aff6a9ccc9"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="705" height="1" uuid="e5f21b91-7f24-498e-97a1-0e93db9225a4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="95484ca0-40b4-4752-95d8-1afbc33c820b"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="96" y="0" width="267" height="20" uuid="0ec52099-dcd7-42f4-8baa-f3874f05208a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Waves Title Report]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

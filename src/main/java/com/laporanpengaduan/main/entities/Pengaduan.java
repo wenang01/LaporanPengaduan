@@ -15,14 +15,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 @Entity
-@Table(name="admin")
-public class Admin {
+@Table(name="pengaduan")
+public class Pengaduan {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idAdmin;
-	private String username;
-	private String password;
-	private String role;
+	private long idPengaduan;
+	
+	private String nama;
+	private String alamat;
+	private String kejadian;
+	private String fotoKejadian;
+	private String status;
+	private String keterangan;
 	
 }

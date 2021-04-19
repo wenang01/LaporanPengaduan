@@ -17,7 +17,7 @@
 <div class="container-md">	
 <div class="my-4 p-8 bg-body rounded shadow-md">
 <table class="table table-light table-hover">
-<a th:href="@{'/admin/add/'}" class="btn btn-primary btn-sm" tabindex="-1" role="button" >Add AdminUser </a>
+<a th:href="@{'/adminuser/add/'}" class="btn btn-primary btn-sm" tabindex="-1" role="button" >Add AdminUser </a>
 <p></p>
   <thead class="table-dark">
     <tr>
@@ -36,8 +36,8 @@
       <td th:text="${admin.password}"></td>
       <td th:text="${admin.role}"></td>
       <td>
-         <a th:href="@{/admin/update/{id}(id=${admin.idAdmin})}" class="btn btn-primary btn-sm" tabindex="-1" role="button" ><i class="fa fa-folder" ></i> Update </a>
-         <a th:href="@{/admin/delete/{id}(id=${admin.idAdmin})}" class="btn btn-danger btn-sm" tabindex="-1" role="button" ><i class="fa fa-close"></i> Delete </a>
+         <a th:href="@{/adminuser/update/{id}(id=${admin.idAdmin})}" class="btn btn-primary btn-sm" tabindex="-1" role="button" ><i class="fa fa-folder" ></i> Update </a>
+         <a th:href="@{/adminuser/delete/{id}(id=${admin.idAdmin})}" class="btn btn-danger btn-sm" tabindex="-1" role="button" ><i class="fa fa-close"></i> Delete </a>
       </td>
     </tr>
     

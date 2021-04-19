@@ -6,14 +6,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.laporanpengaduan.main.entities.Admin;
-import com.laporanpengaduan.main.repositories.AdminRepository;
+import com.laporanpengaduan.main.entities.AdminUser;
+import com.laporanpengaduan.main.repositories.AdminUserRepository;
 
 @SpringBootApplication
 public class LaporanPengaduanApplication implements CommandLineRunner{
 
 	@Autowired
-	private AdminRepository adminRepository;
+	private AdminUserRepository adminRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(LaporanPengaduanApplication.class, args);
@@ -23,7 +23,7 @@ public class LaporanPengaduanApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		
-		Admin admin = new Admin();
+		AdminUser admin = new AdminUser();
 		admin.setIdAdmin(1);
 		admin.setUsername("admin");
 		

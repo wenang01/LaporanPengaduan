@@ -5,27 +5,27 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.laporanpengaduan.main.entities.Admin;
-import com.laporanpengaduan.main.repositories.AdminRepository;
+import com.laporanpengaduan.main.entities.AdminUser;
+import com.laporanpengaduan.main.repositories.AdminUserRepository;
 
 @Service
-public class ModelAdmin implements ModelAdminInterface{
+public class ModelAdminUser implements ModelAdminUserInterface{
 
 	@Autowired
-	AdminRepository adminRepository;
+	AdminUserRepository adminRepository;
 	
 	@Override
-	public List<Admin> getAllAdmin() {
-		return (List<Admin>) this.adminRepository.findAll();
+	public List<AdminUser> getAllAdmin() {
+		return (List<AdminUser>) this.adminRepository.findAll();
 	}
 
 	@Override
-	public Admin addAdmin(Admin admin) {
+	public AdminUser addAdmin(AdminUser admin) {
 		return this.adminRepository.save(admin);
 	}
 
 	@Override
-	public Admin getAdminById(String id) {
+	public AdminUser getAdminById(String id) {
 		return this.adminRepository.findById(Long.parseLong(id)).get();
 	}
 

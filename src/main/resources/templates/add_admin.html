@@ -9,7 +9,7 @@
 </head>
 <body>
 	<H1>Input AdminUser</H1>
-	<form action="#" th:action="@{/adminuser/view}" th:object="${adminuser}" method="post">
+	<form action="#" th:action="@{/adminuser/view}" th:object="${admin}" method="post">
 		<div class="mb-3">
 		  <label for="username" class="form-label">Username</label>
 		  <input type="text" class="form-control" id="username" placeholder="Username" th:field="*{username}">

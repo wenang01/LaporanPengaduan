@@ -47,11 +47,11 @@ public class WebSecurityConfigs extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity httpSec) throws Exception{
 		httpSec.authorizeRequests()
-		.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
+		.antMatchers("/adminuser/**").access("hasRole('ROLE_ADMIN')")
 		.anyRequest().permitAll()
 		.and()
 		.formLogin().loginPage("/login")
-		.defaultSuccessUrl("/admin/view").permitAll()
+		.defaultSuccessUrl("/adminuser/view").permitAll()
 		.and()
 		.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login");
 	}
