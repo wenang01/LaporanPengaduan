@@ -1,2 +1,2 @@
 # LaporanPengaduan
-# Lapooran Pengaduan digunakan untuk melaporkan pengduan tindak kejahatan secara online
+# Lapooran Pengaduan digunakan untuk melaporkan tindak kejahatan secara online
