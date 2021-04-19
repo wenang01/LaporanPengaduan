@@ -10,5 +10,7 @@ public interface ModelPengaduanInterface{
 	public Pengaduan addPengaduan(Pengaduan pengaduan);
 	public void deletePengaduan(String id);
 	public Pengaduan cariPengaduan(String id);
+	public List<Pengaduan> getStatusResponse();
+	public List<Pengaduan> getStatusPending();
 	
 }

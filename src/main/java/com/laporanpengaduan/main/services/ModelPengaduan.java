@@ -43,4 +43,16 @@ public class ModelPengaduan implements ModelPengaduanInterface{
 		this.pengaduanRepository.save(pengaduan);
 	}
 
+	@Override
+	public List<Pengaduan> getStatusResponse() {
+		// TODO Auto-generated method stub
+		return this.pengaduanRepository.findStatusResponse();
+	}
+
+	@Override
+	public List<Pengaduan> getStatusPending() {
+		// TODO Auto-generated method stub
+		return this.pengaduanRepository.findStatusPending();
+	}
+
 }

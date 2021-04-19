@@ -9,11 +9,14 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a th:attr="class=${active == 0 ? 'nav-link active' : 'nav-link'}"  href="/">Home</a>
-        <div sec:authorize="hasRole('ROLE_ADMIN')">
-          <a th:attr="class=${active == 1 ? 'nav-link active' : 'nav-link'}"  th:href="@{'/dashboard/view/'}">Dashboard </a>
+        <div sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
+          <a th:attr="class=${active == 1 ? 'nav-link active' : 'nav-link'}"  th:href="@{'/dashboard/'}">Dashboard </a>
+       	</div>
+       	<div sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
+          <a th:attr="class=${active == 1 ? 'nav-link active' : 'nav-link'}"  th:href="@{'/pengaduan/add/'}">Tambah Laporan </a>
        	</div>
         <div sec:authorize="hasRole('ROLE_ADMIN')">
-          <a th:attr="class=${active == 2 ? 'nav-link active' : 'nav-link'}"  th:href="@{'/proseslaporan/view/'}">Proses Laporan </a>
+          <a th:attr="class=${active == 2 ? 'nav-link active' : 'nav-link'}"  th:href="@{'/pengaduan/view/'}">Proses Laporan </a>
        	</div>
         <a  class ="nav-link" th:href="@{'/logout'}" tabindex="-1" aria-disabled="true">Logout</a>
       </div>

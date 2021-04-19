@@ -48,10 +48,11 @@ public class WebSecurityConfigs extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity httpSec) throws Exception{
 		httpSec.authorizeRequests()
 		.antMatchers("/adminuser/**").access("hasRole('ROLE_ADMIN')")
+		.antMatchers("/pengaduan/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
 		.anyRequest().permitAll()
 		.and()
 		.formLogin().loginPage("/login")
-		.defaultSuccessUrl("/adminuser/view").permitAll()
+		.defaultSuccessUrl("/dashboard/").permitAll()
 		.and()
 		.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login");
 	}

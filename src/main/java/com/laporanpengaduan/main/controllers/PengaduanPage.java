@@ -122,8 +122,11 @@ public class PengaduanPage {
 	}
 	
 	@GetMapping("/dashboard")
-	public String viewJumlahLaporan(@ModelAttribute JumlahPengaduanList jmlPengaduanList, Model model) {
-		
+	public String viewJumlahLaporan(Model model) {
+		model.addAttribute("jumlahLaporan", modelPengaduan.getAllPengaduan().size());
+		model.addAttribute("jumlahRespon",modelPengaduan.getStatusResponse().size());
+		model.addAttribute("jumlahPending",modelPengaduan.getStatusPending().size());
+		/*
 		List<Pengaduan> lstPengaduan = new ArrayList<Pengaduan>();
 		Pengaduan pengaduan = (Pengaduan) modelPengaduan.getAllPengaduan();
 		
@@ -142,10 +145,11 @@ public class PengaduanPage {
 		entPengaduan.setJumlahLaporan(jmlPengaduanList.getPengaduan().size());
 		
 		model.addAttribute("jmlhlaporan", entPengaduan);
-		
+		*/
 		return "dashboard";
+		
 	}
-	
+	/*
 	private JumlahPengaduan hitungPengaduan(JumlahPengaduanList jmlPengaduanList) {
 
 		JumlahPengaduan entPengaduan = new JumlahPengaduan();
@@ -164,5 +168,5 @@ public class PengaduanPage {
 		
 		return entPengaduan;
 	}
-
+	*/
 }

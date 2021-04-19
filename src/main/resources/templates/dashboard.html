@@ -22,11 +22,23 @@
 				<div class="my-4 p-8 bg-body rounded shadow-md">
 				
 					<div class="card bg-light mb-3" style="max-width: 18rem;">
-						<div class="card-header">Header</div>
+						<div class="card-header">Jumlah Laporan</div>
 						<div class="card-body">
-							<h5 class="card-title">Light card title</h5>
-							<p class="card-text">Some quick example text to build on the
-								card title and make up the bulk of the card's content.</p>
+							<p><h5 class="card-title" th:text = "${jumlahLaporan}"></h5></p>
+						</div>
+					</div>
+					
+					<div class="card bg-light mb-3" style="max-width: 18rem;">
+						<div class="card-header">Jumlah Laporan Ditanggapi</div>
+						<div class="card-body">
+							<p><h5 class="card-title" th:text = "${jumlahRespon}"></h5></p>
+						</div>
+					</div>
+					
+					<div class="card bg-light mb-3" style="max-width: 18rem;">
+						<div class="card-header">Jumlah Laporan Dalam Proses</div>
+						<div class="card-body">
+							<p><h5 class="card-title" th:text = "${jumlahPending}"></h5></p>
 						</div>
 					</div>
 					

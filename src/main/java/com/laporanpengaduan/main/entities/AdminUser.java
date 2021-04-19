@@ -30,9 +30,5 @@ public class AdminUser {
 	private String username;
 	private String password;
 	private String role;
-	
-	@OneToMany(cascade = CascadeType.ALL)
-	 @JoinColumn(name="idAdminUser", referencedColumnName = "idAdmin")
-	private List<Pengaduan> lstPengaduan = new ArrayList<Pengaduan>();
-	
+		
 }
